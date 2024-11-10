@@ -25,17 +25,6 @@
   services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
 
-  users.users.aaron = {
-    isNormalUser = true;
-    extraGroups = [
-      "wheel"
-      "networkmanager"
-    ]; # Enable ‘sudo’ for the user.
-    packages = with pkgs; [
-      firefox
-    ];
-  };
-
   networking.firewall.enable = false;
 
   system.stateVersion = "24.11";

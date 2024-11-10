@@ -11,6 +11,10 @@
 
     impermanence.url = "github:nix-community/impermanence";
 
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -18,6 +22,7 @@
       nixpkgs,
       disko,
       impermanence,
+      home-manager,
       ...
     }:
     {
@@ -28,6 +33,12 @@
             ./hosts/beelink
             disko.nixosModules.disko
             impermanence.nixosModules.impermanence
+            home-manager.nixosModules.home-manager
+            {
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+              home-manager.users.aaron = import ./home;
+            }
           ];
         };
       };
