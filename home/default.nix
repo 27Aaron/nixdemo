@@ -64,7 +64,7 @@
         -Dawt.toolkit.name=WLToolkit
       '';
     })
-    (pkgs.jetbrains.jetbrains.datagrip.override {
+    (pkgs.jetbrains.datagrip.override {
       vmopts = ''
         -Xms128m
         -Xmx1024m
