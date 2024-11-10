@@ -4,6 +4,7 @@
     directories = [
       "/etc/NetworkManager/system-connections"
       "/etc/ssh"
+      "/etc/daed"
 
       "/var/log"
       "/var/lib"
