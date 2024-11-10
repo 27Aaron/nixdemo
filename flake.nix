@@ -35,7 +35,7 @@
             ./hosts/beelink
             disko.nixosModules.disko
             impermanence.nixosModules.impermanence
-            daeuniverse.nixosModules.daed
+            inputs.daeuniverse.nixosModules.daed
             home-manager.nixosModules.home-manager
             {
               home-manager.useGlobalPkgs = true;
