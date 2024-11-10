@@ -10,6 +10,7 @@
     ./hardware.nix
 
     ../../modules/nixos/base
+    ../../modules/nixos/packages
     ../../modules/nixos/disko/crypt-nvme
     ../../modules/nixos/impermanence/desktop
   ];
@@ -31,19 +32,9 @@
       "networkmanager"
     ]; # Enable ‘sudo’ for the user.
     packages = with pkgs; [
-      just
       firefox
-      neofetch
-      tree
-      btop
     ];
   };
-
-  environment.systemPackages = with pkgs; [
-    vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-    wget
-    git
-  ];
 
   networking.firewall.enable = false;
 
