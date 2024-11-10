@@ -24,8 +24,14 @@
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
-  # Enable the Plasma 5 Desktop Environment.
-  services.displayManager.sddm.enable = true;
+  # Enable the Plasma 6 Desktop Environment.
+  services.displayManager.sddm = {
+    enable = true;
+    autoLogin = {
+      enable = true;
+      user = "aaron";
+    };
+  };
   services.desktopManager.plasma6.enable = true;
 
   networking.firewall.enable = false;
