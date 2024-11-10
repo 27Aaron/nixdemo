@@ -15,6 +15,8 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    daeuniverse.url = "github:daeuniverse/flake.nix";
   };
 
   outputs =
@@ -33,6 +35,7 @@
             ./hosts/beelink
             disko.nixosModules.disko
             impermanence.nixosModules.impermanence
+            daeuniverse.nixosModules.daed
             home-manager.nixosModules.home-manager
             {
               home-manager.useGlobalPkgs = true;
