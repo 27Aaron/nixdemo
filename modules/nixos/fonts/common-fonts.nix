@@ -22,8 +22,12 @@
           # Characters
           "FiraCode"
           "JetBrainsMono"
+          "Iosevka"
         ];
       })
+
+      julia-mono
+      dejavu_fonts
     ];
   };
 }
