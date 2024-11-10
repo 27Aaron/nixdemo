@@ -34,10 +34,20 @@
         ".cache/mozilla"
 
         # Plasma6
-        "./config/plasma-localerc"
-        "./config/plasma-org.kde.plasma.desktop-appletsrc"
-        "./config/plasmashellrc"
-        "./config/kwinoutputconfig.json"
+        ".config/kactivitymanagerdrc"
+        ".config/kactivitymanagerd-statsrc"
+        ".config/kconf_updaterc"
+        ".config/kded5rc"
+        ".config/kdedefaults"
+        ".config/kdeglobals"
+        ".config/kde.org"
+        ".config/kglobalshortcutsrc"
+        ".config/ktimezonedrc"
+        ".config/kwinoutputconfig.json"
+        ".config/kwinrc"
+        ".config/plasma-localerc"
+        ".config/plasma-org.kde.plasma.desktop-appletsrc"
+        ".config/plasmashellrc"
 
         {
           directory = ".gnupg";
