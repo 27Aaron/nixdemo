@@ -9,7 +9,7 @@
       "/var/lib"
     ];
     files = [
-      "/etc/machine-id"
+
     ];
     users.aaron = {
       directories = [
