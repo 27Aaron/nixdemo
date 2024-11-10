@@ -3,6 +3,6 @@ _:
 {
   imports = [
     ./cursor.nix
-    # ./gtk.nix
+    ./gtk.nix
   ];
 }

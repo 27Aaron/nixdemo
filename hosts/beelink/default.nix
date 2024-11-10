@@ -11,7 +11,7 @@
 
     ../../modules/nixos/base
     ../../modules/nixos/fonts
-    ../../modules/nixos/themes
+    # ../../modules/nixos/themes
     ../../modules/nixos/packages
     ../../modules/nixos/disko/crypt-nvme
     ../../modules/nixos/impermanence/desktop
