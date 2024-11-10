@@ -10,6 +10,7 @@
     ./hardware.nix
 
     ../../modules/nixos/base
+    ../../modules/nixos/fonts
     ../../modules/nixos/packages
     ../../modules/nixos/disko/crypt-nvme
     ../../modules/nixos/impermanence/desktop
