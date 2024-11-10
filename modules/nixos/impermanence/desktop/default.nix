@@ -32,6 +32,12 @@
         ".mozilla"
         ".cache/mozilla"
 
+        # Plasma6
+        "./config/plasma-localerc"
+        "./config/plasma-org.kde.plasma.desktop-appletsrc"
+        "./config/plasmashellrc"
+        "./config/kwinoutputconfig.json"
+
         {
           directory = ".gnupg";
           mode = "0700";
