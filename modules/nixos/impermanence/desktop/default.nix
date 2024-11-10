@@ -33,17 +33,6 @@
         ".mozilla"
         ".cache/mozilla"
 
-        # Plasma6
-        "./config/kdeglobals"
-        "./config/kwinrc"
-        "./config/kwinoutputconfig.json"
-        "./config/plasma-org.kde.plasma.desktop-appletsrc"
-        "./config/plasmashellrc"
-        "./config/powermanagementprofilesrc"
-        "./config/kactivitymanagerdrc"
-        "./config/kactivitymanagerd-statsrc"
-        "./config/ktimezonedrc"
-
         {
           directory = ".gnupg";
           mode = "0700";
