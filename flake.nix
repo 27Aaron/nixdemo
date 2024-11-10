@@ -25,7 +25,7 @@
         beelink = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
           modules = [
-            ./hosts/beelink/configuration.nix
+            ./hosts/beelink
             disko.nixosModules.disko
             impermanence.nixosModules.impermanence
           ];

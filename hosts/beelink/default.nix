@@ -1,7 +1,3 @@
-# Edit this configuration file to define what should be installed on
-# your system. Help is available in the configuration.nix(5) man page, on
-# https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
-
 {
   config,
   lib,
@@ -12,9 +8,10 @@
 {
   imports = [
     # Include the results of the hardware scan.
-    ./disko-fs.nix
-    ./impermanence.nix
-    ./hardware-configuration.nix
+    ./hardware.nix
+
+    ../../modules/nixos/disko/crypt-nvme
+    ../../modules/nixos/impermanence/desktop
   ];
 
   networking.hostName = "beelink"; # Define your hostname.
@@ -22,6 +19,11 @@
 
   time.timeZone = "Asia/Singapore";
   i18n.defaultLocale = "en_US.UTF-8";
+
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
@@ -52,6 +54,7 @@
       "networkmanager"
     ]; # Enable ‘sudo’ for the user.
     packages = with pkgs; [
+      just
       firefox
       neofetch
       tree
