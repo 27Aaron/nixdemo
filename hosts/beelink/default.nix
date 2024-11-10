@@ -7,6 +7,7 @@
 
 {
   imports = [
+    ./proxy.nix
     ./hardware.nix
 
     ../../modules/nixos/base
