@@ -21,7 +21,9 @@
         "Documents"
         "Videos"
 
+        ".mozilla"
         ".cache/JetBrains"
+        ".cache/google-chrome"
 
         {
           directory = ".gnupg";
