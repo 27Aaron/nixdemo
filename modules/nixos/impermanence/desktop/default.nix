@@ -21,6 +21,8 @@
         "Documents"
         "Videos"
 
+        ".cache/JetBrains"
+
         {
           directory = ".gnupg";
           mode = "0700";
