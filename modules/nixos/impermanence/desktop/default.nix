@@ -21,9 +21,16 @@
         "Documents"
         "Videos"
 
-        ".mozilla"
+        # JetBrains
+        ".config/JetBrains"
         ".cache/JetBrains"
+        ".local/share/JetBrains"
+
+        # Chrome
+        ".config/google-chrome"
         ".cache/google-chrome"
+        ".mozilla"
+        ".cache/mozilla"
 
         {
           directory = ".gnupg";
