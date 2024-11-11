@@ -22,16 +22,26 @@
         "Documents"
         "Videos"
 
+        ".npm"
+        ".java"
+
         # JetBrains
         ".config/JetBrains"
         ".cache/JetBrains"
         ".local/share/JetBrains"
 
+        # Vscode
+        ".config/Code"
+
         # Chrome
         ".config/google-chrome"
         ".cache/google-chrome"
-        ".mozilla"
+        ".cache/bookmarksrunner"
         ".cache/mozilla"
+        ".mozilla"
+
+        # Enpass
+        ".cache/Enpass"
 
         {
           directory = ".gnupg";
