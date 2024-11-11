@@ -14,8 +14,11 @@
     enable = true;
     lfs.enable = true;
 
-    userName = "Aaron";
-    userEmail = "85681241+27Aaron@users.noreply.github.com";
-
+    profiles = {
+      private = {
+        name = "Aaron";
+        email = "85681241+27Aaron@users.noreply.github.com";
+      };
+    };
   };
 }
