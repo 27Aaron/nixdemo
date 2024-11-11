@@ -6,7 +6,7 @@
   home.packages = with pkgs; [
     nodejs_20
     jdk8
-    vacode
+    vscode
     (pkgs.jetbrains.idea-ultimate.override {
       vmopts = ''
         -Xms128m
