@@ -36,8 +36,10 @@
 
   programs.git = {
     enable = true;
-    userName = "Aaron";
-    userEmail = "85681241+27Aaron@users.noreply.github.com";
+    config = {
+      user.name = "Aaron";
+      user.email = "85681241+27Aaron@users.noreply.github.com";
+    };
   };
 
   networking.firewall.enable = false;
