@@ -34,6 +34,12 @@
   };
   services.desktopManager.plasma6.enable = true;
 
+  programs.git = {
+    enable = true;
+    userName = "Aaron";
+    userEmail = "85681241+27Aaron@users.noreply.github.com";
+  };
+
   networking.firewall.enable = false;
 
   system.stateVersion = "24.11";

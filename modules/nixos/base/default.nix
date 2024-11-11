@@ -1,11 +1,10 @@
 { ... }:
 {
   imports = [
-    ./git.nix
     ./i18n.nix
     ./nix.nix
     ./ssh.nix
     ./sysctl.nix
-    ./user-group.nix
+    ./user-group.nixs
   ];
 }
