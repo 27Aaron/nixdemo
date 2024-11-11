@@ -17,8 +17,8 @@
     enable = true;
     lfs.enable = true;
 
-    userName = Aaron;
-    userEmail = 85681241+27Aaron@users.noreply.github.com;
+    userName = "Aaron";
+    userEmail = "85681241+27Aaron@users.noreply.github.com";
 
     # A syntax-highlighting pager in Rust(2019 ~ Now)
     delta = {
