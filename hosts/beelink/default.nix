@@ -41,7 +41,6 @@
     config = {
       log = {
         level = "info";
-        output = "/var/log/realm.log";
       };
       network = {
         no_tcp = false;
