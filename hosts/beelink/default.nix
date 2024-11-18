@@ -9,7 +9,7 @@
   imports = [
     ./proxy.nix
     ./hardware.nix
-    ./firewall.nix
+    # ./firewall.nix
 
     ../../modules/nixos/base
     ../../modules/nixos/fonts
