@@ -9,6 +9,7 @@
   imports = [
     ./proxy.nix
     ./hardware.nix
+    ./firewall.nix
 
     ../../modules/nixos/base
     ../../modules/nixos/fonts
@@ -42,8 +43,6 @@
       user.email = "85681241+27Aaron@users.noreply.github.com";
     };
   };
-
-  networking.firewall.enable = false;
 
   system.stateVersion = "24.11";
 
