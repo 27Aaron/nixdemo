@@ -39,10 +39,12 @@
   services.realm = {
     enable = true;
     config = {
-      endpoints = {
-        listen = "0.0.0.0:2222";
-        remote = "192.168.122.102:22";
-      };
+      endpoints = [
+        {
+          listen = "0.0.0.0:5000";
+          remote = "1.1.1.1:443";
+        }
+      ];
     };
   };
 
