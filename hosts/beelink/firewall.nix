@@ -1,39 +1,31 @@
 { config, pkgs, ... }:
 
 {
-  services.nftables = {
+  # 启用防火墙
+  networking.firewall.enable = true;
+
+  # 配置 iptables 规则
+  networking.firewall.iptables = {
     enable = true;
-    config = ''
-      table inet filter {
-        chain input {
-          type filter hook input priority 0; policy accept;
-          # 允许外网访问本地主机的 22 端口 (本地主机的 SSH)
-          tcp dport 22 accept;
 
-          # 允许外网访问 VM 转发端口 (例如 2222)
-          tcp dport 2222 accept;
-        }
-
-        chain forward {
-          type filter hook forward priority 0; policy accept;
-          # 允许将外部流量转发到 VM 的 22 端口
-          ip daddr 192.168.122.102 tcp dport 22 accept;
-        }
-      }
-
-      table ip nat {
-        chain prerouting {
-          type nat hook prerouting priority 0; policy accept;
-          # 将主机 2222 端口的流量转发到 VM 的 22 端口
-          tcp dport 2222 dnat to 192.168.122.102:22;
-        }
-
-        chain postrouting {
-          type nat hook postrouting priority 100; policy accept;
-          # 确保流量从 VM 返回时可以正确出站
-          ip saddr 192.168.122.0/24 masquerade;
-        }
-      }
+    # 允许外网访问主机的 SSH 端口
+    extraRules = ''
+      # 允许访问本机的 SSH 端口
+      -A INPUT -p tcp --dport 22 -j ACCEPT
+      # 允许访问主机的转发端口 (例如 2222)
+      -A INPUT -p tcp --dport 2222 -j ACCEPT
+      # 允许转发到虚拟机的 SSH 端口 (192.168.122.102 的 22 端口)
+      -A FORWARD -p tcp -d 192.168.122.102 --dport 22 -j ACCEPT
     '';
+
+    # 配置 NAT 转发规则
+    nat = {
+      extraRules = ''
+        # 将外部访问主机的 2222 端口流量转发到虚拟机的 22 端口
+        -A PREROUTING -p tcp --dport 2222 -j DNAT --to-destination 192.168.122.102:22
+        # 确保从虚拟机返回的流量使用正确的源地址
+        -A POSTROUTING -s 192.168.122.102 -o enp2s0 -j MASQUERADE
+      '';
+    };
   };
 }
