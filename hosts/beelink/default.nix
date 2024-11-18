@@ -36,7 +36,7 @@
   };
   services.desktopManager.plasma6.enable = true;
 
-  services.realm.enable = {
+  services.realm = {
     enable = true;
     config = {
       endpoints = {
