@@ -39,6 +39,16 @@
   services.realm = {
     enable = true;
     config = {
+      log = {
+        level = "info";
+        output = "/var/log/realm.log";
+      };
+      network = {
+        no_tcp = false;
+        use_udp = true;
+        tcp_timeout = "5";
+        udp_timeout = "30";
+      };
       endpoints = [
         {
           listen = "0.0.0.0:2222";
