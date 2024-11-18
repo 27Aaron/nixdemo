@@ -11,11 +11,12 @@
       2222
     ];
 
-    # 配置端口转发
-    extraCommands = ''
-      # 使用 iptables 配置端口转发
-      iptables -t nat -A PREROUTING -p tcp --dport 2222 -j DNAT --to-destination 192.168.122.102:22
-      iptables -A FORWARD -p tcp -d 192.168.122.102 --dport 22 -j ACCEPT
-    '';
+    networking.nat = {
+      enable = true;
+      prerouting = {
+        # 将 2222 端口转发到虚拟机的 22 端口
+        "tcp dpt:2222" = "192.168.122.102:22";
+      };
+    };
   };
 }
