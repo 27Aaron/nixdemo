@@ -15,9 +15,9 @@
     ../../modules/nixos/fonts
     # ../../modules/nixos/themes
     ../../modules/nixos/packages
-    # ../../modules/nixos/virtualization
-    ../../modules/nixos/oci-containers
-    ../../modules/nixos/oci-containers/debian
+    ../../modules/nixos/virtualization
+    # ../../modules/nixos/oci-containers
+    # ../../modules/nixos/oci-containers/debian
     ../../modules/nixos/disko/crypt-nvme
     ../../modules/nixos/impermanence/desktop
   ];
