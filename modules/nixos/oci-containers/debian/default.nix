@@ -11,7 +11,7 @@ _: {
         TZ = "Asia/Singapore";
       };
       volumes = [
-        "/Users/aaron/Documents/Workspace:/Documents/Workspace"
+        "/home/aaron/Documents/Workspace:/Documents/Workspace"
       ];
       autoStart = true;
     };
