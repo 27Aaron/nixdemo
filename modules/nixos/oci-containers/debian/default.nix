@@ -5,7 +5,7 @@ _: {
       hostname = "debain";
       image = "debian:bookworm-20241111";
       ports = [
-        "233:22"
+        "22222:22"
       ];
       environment = {
         TZ = "Asia/Singapore";
